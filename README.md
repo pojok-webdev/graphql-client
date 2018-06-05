@@ -1,4 +1,4 @@
-# Graphql-server
+# Graphql-client
 
 Client for graphql
 
