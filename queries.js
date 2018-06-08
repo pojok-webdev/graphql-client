@@ -19,6 +19,7 @@ saveEmployee = (args)=>{
           level:`+args.level+`,
           username:"`+args.username+`",
           division:{
+            id:1
             name:"`+args.division.name+`"
           },
         }) {
@@ -46,8 +47,19 @@ getDivisions = ()=>{
   }
   `
 }
+updateEmployee = (args)=>{
+  return `
+  mutation {
+    updateEmployee(input:{
+      id:`+args.id+`,username:"`+args.username+`",level:`+args.level+`
+    })
+    {id}
+  }
+  `
+}
 module.exports = {
     saveDivision:saveDivision,
     saveEmployee:saveEmployee,
+    updateEmployee:updateEmployee,
     getDivisions: getDivisions
 }
